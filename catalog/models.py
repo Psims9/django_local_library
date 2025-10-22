@@ -88,6 +88,7 @@ class Author(models.Model):
 
     def __str__(self):
         return f'{self.last_name}, {self.first_name}'
+        
     
 class Language(models.Model):
     name = models.CharField(max_length=200, unique=True)
