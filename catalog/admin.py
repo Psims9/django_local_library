@@ -40,7 +40,9 @@ class BookInstanceAdmin(admin.ModelAdmin):
     list_display = (
         'display_name',
         'status',
+        'borrower',
         'due_back',
+        'id',
     )
 
     list_filter = (
@@ -58,7 +60,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
         (
             'Availability',
             {
-                'fields': ('status', 'due_back')
+                'fields': ('status', 'due_back', 'borrower')
             }
         ),
     )
