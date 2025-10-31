@@ -1,0 +1,6 @@
+In forms.py we overwrite the clean_renewal_date(self) method to
+add some extra validations criteria for the 'renewal_date' field.
+Then in views.py, we create form = RenewBookForm(), bind the data from
+the post request and call form.is_valid() before changing the database.
+My question is does the .is_valid() method call the clean_renewal_date()
+with our extra validation logic?
